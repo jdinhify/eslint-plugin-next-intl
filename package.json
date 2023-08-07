@@ -4,7 +4,11 @@
   "description": "ESLint plugin for next-intl",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prettier": "prettier \"*.{js,json,yml,yaml,md}\" \"src/**/*\"",
+    "format": "npm run prettier --write",
+    "format:check": "npm run prettier --check",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,5 +26,37 @@
   "bugs": {
     "url": "https://github.com/csi-lk/eslint-plugin-next-intl/issues"
   },
-  "homepage": "https://github.com/csi-lk/eslint-plugin-next-intl#readme"
+  "homepage": "https://github.com/csi-lk/eslint-plugin-next-intl#readme",
+  "devDependencies": {
+    "@types/eslint": "^8.44.2",
+    "@typescript-eslint/parser": "^6.3.0",
+    "eslint": "^8.46.0",
+    "jest": "^29.6.2",
+    "prettier": "^3.0.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "eslint": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(src/.*\\.test)\\.ts$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "\\.d\\.ts$"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ]
+  }
 }

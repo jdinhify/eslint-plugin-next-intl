@@ -21,3 +21,9 @@ _Note: If you installed ESLint globally (using the -g flag) then you must also i
 ## Supported Rules
 
 [next-intl/no-dynamic-translation-key](./docs/rules/no-dynamic-translation-key.md): Enforce using static strings as keys for translation functions
+
+## Credits
+
+This set of rules was based off great work done in the repos:
+
+- [lolatravel/eslint-plugin-react-i18n](https://github.com/lolatravel/eslint-plugin-react-i18n)

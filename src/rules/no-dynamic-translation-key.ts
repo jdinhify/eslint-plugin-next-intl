@@ -30,25 +30,33 @@ type CalleeName = { name?: string };
 const rule: Rule.RuleModule = {
   meta,
   create: (context) => {
-    const options = context.options[0] || {};
-    const functionNames = options.functionNames || [];
+    const functionNames = context.options[0]?.functionNames ?? [];
     return {
       CallExpression(node) {
         const calleeName =
           node.callee.type === "MemberExpression"
-            ? (node.callee.property as CalleeName).name
-            : (node.callee as CalleeName).name;
+            ? (node.callee.property as CalleeName)?.name
+            : (node.callee as CalleeName)?.name;
 
-        if (calleeName !== "t" && !functionNames.includes(calleeName)) {
+        if (
+          calleeName !== "t" &&
+          calleeName !== "useTranslations" &&
+          !functionNames.includes(calleeName)
+        ) {
           return;
         }
 
-        if (
-          node.arguments[0] &&
-          node.arguments[0].type === "TemplateLiteral" &&
-          node.arguments[0].expressions.length === 0
-        ) {
-          return;
+        const [firstArgument] = node.arguments;
+
+        switch (firstArgument.type) {
+          case "Literal":
+            return;
+          case "TemplateLiteral":
+            // Make sure no expressions are used in the template literal
+            if (firstArgument.expressions.length === 0) {
+              return;
+            }
+            break;
         }
 
         context.report({ node, message: ERROR_MESSAGE });

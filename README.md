@@ -17,3 +17,7 @@ npm install eslint-plugin-next-intl --save-dev
 ```
 
 _Note: If you installed ESLint globally (using the -g flag) then you must also install `eslint-plugin-next-intl` globally._
+
+## Supported Rules
+
+[next-intl/no-dynamic-translation-key](./docs/rules/no-dynamic-translation-key.md): Enforce using static strings as keys for translation functions

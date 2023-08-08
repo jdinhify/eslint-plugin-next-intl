@@ -2,7 +2,11 @@
   "name": "eslint-plugin-next-intl",
   "version": "1.0.0",
   "description": "ESLint plugin for next-intl",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "docs"
+  ],
   "scripts": {
     "build": "tsc",
     "prettier": "prettier \"*.{js,json,yml,yaml,md}\" \"src/**/*\"",

@@ -1,4 +1,8 @@
-# Use `next-intl/link` over `next-link` (use-next-intl-link-over-next-link)
+# Replace next/link imports with next-intl/link imports (`next-intl/use-next-intl-link-over-next-link`)
+
+🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+
+<!-- end auto-generated rule header -->
 
 [`next-intl`'s API docs](https://next-intl-docs.vercel.app/docs/routing/navigation#link) suggests using their version of `link` over the next provided one to automatically prefix the url with the locale as needed.
 
@@ -19,5 +23,3 @@ Examples of **correct** code for this rule:
 ```ts
 import Link from "next-intl/link";
 ```
-
-This rule is fixable

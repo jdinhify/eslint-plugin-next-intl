@@ -20,8 +20,16 @@ _Note: If you installed ESLint globally (using the -g flag) then you must also i
 
 ## Supported Rules
 
-[next-intl/no-dynamic-translation-key](./docs/rules/no-dynamic-translation-key.md): Enforce using static strings as keys for translation functions
-[next-intl/use-next-intl-link-over-next-link](./docs/rules/use-next-intl-link-over-next-link.md): Enforce using `next-intl/link` instead of `next-link`
+<!-- begin auto-generated rules list -->
+
+🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
+
+| Name                                                                                 | Description                                                    | 🔧  |
+| :----------------------------------------------------------------------------------- | :------------------------------------------------------------- | :-- |
+| [no-dynamic-translation-key](docs/rules/no-dynamic-translation-key.md)               | Enforce using static strings as keys for translation functions |     |
+| [use-next-intl-link-over-next-link](docs/rules/use-next-intl-link-over-next-link.md) | Replace next/link imports with next-intl/link imports          | 🔧  |
+
+<!-- end auto-generated rules list -->
 
 ## Credits
 

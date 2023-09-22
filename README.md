@@ -21,6 +21,7 @@ _Note: If you installed ESLint globally (using the -g flag) then you must also i
 ## Supported Rules
 
 [next-intl/no-dynamic-translation-key](./docs/rules/no-dynamic-translation-key.md): Enforce using static strings as keys for translation functions
+[next-intl/use-next-intl-link-over-next-link](./docs/rules/use-next-intl-link-over-next-link.md): Enforce using `next-intl/link` instead of `next-link`
 
 ## Credits
 
